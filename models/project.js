@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Project = sequelize.define('Projects', {
+  const Project = sequelize.define('Project', {
     project_name: DataTypes.STRING,
     project_status: DataTypes.ENUM('New', 'Active', 'Hold', 'Complete'),
     project_manager: DataTypes.STRING,
