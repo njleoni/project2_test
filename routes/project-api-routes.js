@@ -10,10 +10,10 @@ module.exports = (app) => {
     db.Project.findAll({})
       .then((data) => {
         console.log(data);
-        res.sendStatus(200);
-        // res.render('index', {
-        //   Project: data,
-        // );
+        // res.sendStatus(200);
+        res.render('index', {
+          Project: data,
+        );
     });
   });
 
