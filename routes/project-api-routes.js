@@ -13,7 +13,7 @@ module.exports = (app) => {
         // res.sendStatus(200);
         res.render('index', {
           Project: data,
-        );
+        });
     });
   });
 
