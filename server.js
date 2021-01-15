@@ -16,13 +16,20 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // - Sets handlebars
-const exphbs = require('express-handlebars');
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// const exphbs = require('express-handlebars');
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
+
+// Routes
+require('./routes/project-api-routes.js')(app);
 
 // - Syncing our sequelize models and then starting our Express app
 db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
 });
 
-
+//--- THIS CAN BE REMOVED ---
+// app.listen(PORT, function() {
+//   // Log (server-side) when our server has started
+//   console.log("Server listening on: http://localhost:" + PORT);
+// });
