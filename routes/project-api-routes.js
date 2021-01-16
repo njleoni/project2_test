@@ -11,8 +11,13 @@ module.exports = (app) => {
       .then((data) => {
         console.log(data);
         // res.sendStatus(200);
+        // const myProjects = {
+        //   Projects: data,
+        // };
+        // console.log(myProjects);
+        // res.render('index', myProjects);
         res.render('index', {
-          Project: data,
+          Projects: data,
         });
     });
   });

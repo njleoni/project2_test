@@ -3,9 +3,9 @@
 <h2>Here are all the projects</h2>
 
 <ul>
-    {{#each Project}}
-    <h3>{{project_name}}</h3>
-    <h3>{{project_status}}</h3>
+    {{#each Projects}}
+    <h3>Project: {{ project_name }}</h3>
+    <h3>Status: {{ project_status }}</h3>
     {{else}}
     <p>No projects created yet</p>
     {{/each}}
