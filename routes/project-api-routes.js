@@ -9,7 +9,8 @@ module.exports = (app) => {
     
     db.Project.findAll({})
       .then((data) => {
-        console.log(data);
+        // const test = res.json(data);
+        // console.log(data.ToJSON());
         // res.sendStatus(200);
         // const myProjects = {
         //   Projects: data,

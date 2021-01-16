@@ -4,9 +4,15 @@
 
 <ul>
     {{#each Projects}}
-    <h3>Project: {{ project_name }}</h3>
-    <h3>Status: {{ project_status }}</h3>
+    <h3>Project: {{ dataValues.project_name }}</h3>
+    <h3>Status: {{ dataValues.project_status }}</h3>
     {{else}}
     <p>No projects created yet</p>
     {{/each}}
 </ul>
+
+<script>
+    console.log(Projects);
+
+
+</script>

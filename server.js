@@ -1,6 +1,8 @@
 // - Dependency
 const express = require('express');
 
+// const javascript = require('../views/views.js');
+
 // - Sets up express app
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -14,6 +16,7 @@ app.use(express.json());
 
 // - Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
+// app.use(javascript);
 
 // - Sets handlebars
 const exphbs = require('express-handlebars');
